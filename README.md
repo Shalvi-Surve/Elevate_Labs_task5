@@ -1,9 +1,9 @@
 # <img width="190" height="98" alt="image" src="https://github.com/user-attachments/assets/dac52983-c1c0-4a13-b1a3-4f0dee953731" />                                                Elevate Labs AI & ML Internship
 
-# Task 4: Classification with Logistic Regression
+# Task 5: Decision Trees and Random Forests
 
 ## Objective
-Build a binary classifier using logistic regression with the Breast Cancer Wisconsin Dataset.
+Learn tree-based models for classification using the Heart Disease Dataset.
 
 
 ## Key Learnings
@@ -13,17 +13,17 @@ Build a binary classifier using logistic regression with the Breast Cancer Wisco
   
 
 ## Dataset Info
-- **Name:** Breast Cancer Wisconsin Dataset
-- **Source:** Downloaded from `https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data`
-- Saved at: `data/input/breast_cancer.csv`
-- **Target:** diagnosis (M=1, B=0)
+- **Name:** Heart Disease Dataset
+- **Source:** Downloaded from `https://www.kaggle.com/datasets/johnsmith88/heart-disease-dataset`
+- Saved at: `data/input/heart.csv`
+- **Source:** Downloaded and saved as `data/input/heart_disease.csv`
+- **Target:** target (1=disease, 0=no disease)
 
 
 ## Tools Used
 - Python
-- Pandas
-- Matplotlib
 - Scikit-learn
+- Graphviz
 
 
 ## Steps Completed
