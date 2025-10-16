@@ -15,8 +15,7 @@ Learn tree-based models for classification using the Heart Disease Dataset.
 ## Dataset Info
 - **Name:** Heart Disease Dataset
 - **Source:** Downloaded from `https://www.kaggle.com/datasets/johnsmith88/heart-disease-dataset`
-- Saved at: `data/input/heart.csv`
-- **Source:** Downloaded and saved as `data/input/heart_disease.csv`
+- Saved at: `data/input/heart_disease.csv`
 - **Target:** target (1=disease, 0=no disease)
 
 
