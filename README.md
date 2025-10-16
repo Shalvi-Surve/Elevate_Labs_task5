@@ -7,9 +7,9 @@ Learn tree-based models for classification using the Heart Disease Dataset.
 
 
 ## Key Learnings
-- Binary classification with logistic regression.
-- Importance of standardization, evaluation metrics (precision, recall, ROC-AUC), and threshold tuning.
-- Visualization of sigmoid function and model performance.
+- Decision tree mechanics and overfitting control with depth limitation.
+- Ensemble learning with Random Forest (bagging + random feature selection).
+- Feature importance analysis and cross-validation for model evaluation.
   
 
 ## Dataset Info
@@ -21,52 +21,46 @@ Learn tree-based models for classification using the Heart Disease Dataset.
 
 ## Tools Used
 - Python
+- Pandas, NumPy
+- Matplotlib, Seaborn
 - Scikit-learn
 - Graphviz
 
 
 ## Steps Completed
-1. **Load/Preprocess**: Loaded dataset, dropped unused 'Unnamed: 32' column, handled missing values (numeric with median, categorical with mode), and standardized features.
-2. **Split Data**: 80-20 train-test split, saved as CSV files with 'diagnosis' included.
-3. **Fit Model**: Trained Logistic Regression with max_iter=1000.
-4. **Evaluate**: Computed confusion matrix, precision, recall, and ROC-AUC.
-5. **Tune Threshold**: Adjusted threshold to 0.3 as an example.
-6. **Visualize**: Plotted confusion matrix, ROC curve, and sigmoid function.
+1. **Train Decision Tree**: Fitted with default settings and depth=3 (to control overfitting).
+2. **Train Random Forest**: Used 100 trees for comparison.
+3. **Feature Importances**: Analyzed and plotted for Random Forest.
+4. **Cross-validation**: Evaluated both models with 5-fold CV.
+5. **Compare Accuracy**: Compared Decision Tree vs. Random Forest performance.
+6. **Note**: Decision Tree visualization was skipped due to Graphviz installation issues.
 
 
 ## Final Output
 - Task Completed
   
-  <img width="359" height="264" alt="image" src="https://github.com/user-attachments/assets/b1d37cff-e942-403c-8067-8452e287ced4" />
+<img width="758" height="181" alt="image" src="https://github.com/user-attachments/assets/5dc8731d-23df-4ce9-a617-0d98fda84e23" />
 
 
 ## Output Files
-- `data/output/train_data.csv`: Training set with standardized features and diagnosis.
-- `data/output/test_data.csv`: Test set with standardized features and diagnosis.
+- `data/output/train_data.csv`: Training set with features and target.
+- `data/output/test_data.csv`: Test set with features and target.
 
 
 ## Output Visualizations
-- Confusion Matrix (Default Threshold):
+- Feature Importance (Random Forest):
   
-  ![Confusion Matrix](visuals/confusion_matrix.png)
+  ![Feature Importance](visuals/feature_importance.png)
   
-- ROC Curve:
-
-  ![ROC Curve](visuals/roc_curve.png)
-
-- Sigmoid Function:
-
-  ![Sigmoid Curve](visuals/sigmoid_curve.png)
-
 
 ## Folder Structure
-<img width="324" height="306" alt="image" src="https://github.com/user-attachments/assets/aa3182b2-e89e-4315-a675-a7192931295c" />
+<img width="749" height="602" alt="image" src="https://github.com/user-attachments/assets/8295455e-ce51-4cfe-b8d8-5a4b36cadc31" />
 
 
-## Challenges & Solutions
-- **Missing Data**: Used median imputation; consider domain-specific methods if needed.
-- **Feature Selection**: Chose Size, Bedrooms, Age; adjust based on dataset.
-- **Model Fit**: Ensured split and evaluation metrics align with task requirements.
+
+## Challenges and Code Adjustments
+- **Missing Dataset File**: Added a file existence check with `os.path.exists()` and printed an error message to guide file placement. Updated `data_path` to match the correct location after downloading.
+- **Graphviz Visualization**: Removed Graphviz-related code (`export_graphviz` and `graphviz.Source`) to proceed without visualization, focusing on accuracy, feature importances, and cross-validation.
 
 
 ## Code Adjustments for GitHub
